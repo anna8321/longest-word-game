@@ -1,0 +1,10 @@
+<h1>Your game:</h1>
+
+<p> <%= @letters %> </p>
+<h2>What is the longest word you can find</h2>
+<form action="/score" method="post">
+  <input type="text" name="new">
+  <input type="submit" value="Post!" placeholder="longest word">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+</form>
